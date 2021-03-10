@@ -3,11 +3,11 @@ package com.common.microservice.service;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.PagingAndSortingRepository;
 
 
 
-public class CommonServiceImpl<E, R extends CrudRepository<E,Long>> implements CommonService<E> {
+public class CommonServiceImpl<E, R extends PagingAndSortingRepository<E,Long>> implements CommonService<E> {
 	
 	@Autowired
 	protected R repository;
